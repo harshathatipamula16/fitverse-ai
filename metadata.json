@@ -1,0 +1,6 @@
+{
+  "name": "FitVerse AI",
+  "description": "Luxury AI Fashion and Couture Stylist Platform featuring virtual try-on and smart color harmony recommendations for Indian, Korean, and Western aesthetics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
