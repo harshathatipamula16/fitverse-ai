@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700;800;950&family=JetBrains+Mono:wght@300;400;500;750&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", "Outfit", "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-display: "Outfit", "Montserrat", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer utilities {
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 194, 209, 0.45);
+    box-shadow: 0 8px 32px rgba(255, 194, 209, 0.15);
+  }
+
+  /* Luxurious pink-hot glass interface */
+  .court-glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 194, 209, 0.4);
+    box-shadow: 0 12px 40px rgba(255, 194, 215, 0.22);
+  }
+
+  /* Gentle Pinterest-style soft background */
+  .pink-aesthetic-bg {
+    background: radial-gradient(circle at top right, #ffd6e7 0%, rgba(255, 194, 209, 0.3) 30%, transparent 60%),
+                radial-gradient(circle at bottom left, #f3d9fa 0%, rgba(243, 217, 250, 0.35) 40%, transparent 65%),
+                radial-gradient(circle at top left, #fff0f5 0%, transparent 50%),
+                #ffffff;
+    color: #1e0e1a;
+  }
+
+  /* Signature Pink Hover Glow */
+  .pink-neon-glow {
+    box-shadow: 0 8px 24px rgba(255, 79, 163, 0.25);
+  }
+
+  /* Delicate luxury typography shadow */
+  .text-shadow-vogue {
+    text-shadow: 0 2px 12px rgba(255, 79, 163, 0.18);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.97) translateY(16px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(0.5deg); }
+}
+
+@keyframes pulseNeon {
+  0%, 100% { opacity: 0.8; box-shadow: 0 4px 15px rgba(255, 79, 163, 0.15); }
+  50% { opacity: 1; box-shadow: 0 8px 25px rgba(255, 79, 163, 0.3); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-neon {
+  animation: pulseNeon 3s infinite;
+}
+
+/* Pink Shimmer Loading State Animation */
+.pink-shim {
+  background: linear-gradient(90deg, #fff0f5 25%, #ffd6e7 50%, #fff0f5 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite linear;
+}
+
+/* Custom Webkit scrollbar stylings */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 214, 231, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 79, 163, 0.3);
+  border-radius: 99px;
+  border: 1px solid rgba(255, 79, 163, 0.1);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 79, 163, 0.6);
+}
+
+/* ==================================================
+   GLOBAL VISIBILITY & CONTRAST OVERRIDES
+   ================================================== */
+body {
+  color: #1a1a1a !important;
+  background: #fcf6f8 !important; /* Slightly darker elegant off-white pink background */
+}
+
+/* Strict Typography Base Fixes */
+p, .text-muted-foreground {
+  color: #333333 !important;
+  opacity: 1 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1a1a1a !important;
+  opacity: 1 !important;
+}
+
+/* Force specific classes from slate/rose light to high contrast */
+.text-slate-100, .text-slate-200, .text-slate-300, .text-zinc-100, .text-zinc-200, .text-zinc-300, .text-zinc-400 {
+  color: #1a1a1a !important;
+}
+
+.text-slate-400, .text-stone-500, .text-stone-600, .text-stone-605, .text-slate-600 {
+  color: #555555 !important;
+}
+
+/* Form controls configuration */
+label, .control-label, [class*="label"] {
+  color: #1a1a1a !important;
+  font-weight: 600 !important;
+  opacity: 1 !important;
+}
+
+input, select, textarea {
+  color: #1a1a1a !important;
+  background-color: #ffffff !important;
+  border: 2px solid #f06292 !important;
+  opacity: 1 !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #c2185b !important;
+  box-shadow: 0 0 0 2px rgba(194, 24, 91, 0.2) !important;
+}
+
+/* Enforce dark placeholders */
+::placeholder, .placeholder-stone-400, .placeholder-rose-200 {
+  color: #666666 !important;
+  opacity: 1 !important;
+}
+
+input::placeholder, select::placeholder, textarea::placeholder {
+  color: #666666 !important;
+  opacity: 1 !important;
+}
+
