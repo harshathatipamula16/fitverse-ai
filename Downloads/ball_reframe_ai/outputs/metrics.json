@@ -1,0 +1,185 @@
+{
+  "tasks_run": [
+    1,
+    2,
+    3
+  ],
+  "model": "yolo11s.pt",
+  "ball_model": "yolo11s.pt",
+  "tracker": "bytetrack.yaml",
+  "conf": 0.35,
+  "imgsz": 960,
+  "ball_conf": 0.1,
+  "ball_imgsz": 1280,
+  "ball_tiles": [
+    1,
+    1
+  ],
+  "device": "cpu",
+  "frames_expected": 1009,
+  "frames_processed": 1009,
+  "all_frames_processed": true,
+  "source_fps": 25.0,
+  "resolution": "768x432",
+  "detect_stage_time_s": 1570.0818399999998,
+  "render_stage_time_s": 38.652411899999606,
+  "encode_time_s": 0.10201510000024427,
+  "player_track_fps": 1.753729722439652,
+  "ball_detect_fps": 1.0152054615559478,
+  "end_to_end_fps": 0.6272011668852815,
+  "encoders": {
+    "task1": "mp4v",
+    "task2": "mp4v",
+    "crop_overlay": "mp4v",
+    "virtual": "mp4v"
+  },
+  "outputs": {
+    "task1": "C:\\Users\\deepak sharma\\Downloads\\ball_reframe_ai\\outputs\\01_tracking.mp4",
+    "task2": "C:\\Users\\deepak sharma\\Downloads\\ball_reframe_ai\\outputs\\02_analytics.mp4",
+    "crop_overlay": "C:\\Users\\deepak sharma\\Downloads\\ball_reframe_ai\\outputs\\03_ball_cam_overlay.mp4",
+    "virtual": "C:\\Users\\deepak sharma\\Downloads\\ball_reframe_ai\\outputs\\03_ball_cam_vertical.mp4"
+  },
+  "ball_state_counts": {
+    "detected": 541,
+    "interpolated": 92,
+    "predicted": 111,
+    "lost": 265
+  },
+  "frames_with_raw_ball_candidate": 621,
+  "frames_with_detected_ball_in_track": 541,
+  "static_candidates_penalised": 192,
+  "ball_covered_frames_pct": 73.73637264618434,
+  "coa_mode_counts": {
+    "ball+players": 633,
+    "players median": 376
+  },
+  "frames_without_coa": 0,
+  "track_stats": {
+    "unique_person_ids": 121,
+    "short_lived_ids_lt_25_frames": 38,
+    "suspected_id_switches_heuristic": 26,
+    "frames_without_players": 0,
+    "mean_players_per_frame": 11.882061446977206,
+    "max_players_in_frame": 17
+  },
+  "suspected_switch_events": [
+    [
+      38,
+      16,
+      22
+    ],
+    [
+      56,
+      22,
+      30
+    ],
+    [
+      68,
+      30,
+      45
+    ],
+    [
+      228,
+      3,
+      362
+    ],
+    [
+      305,
+      273,
+      418
+    ],
+    [
+      317,
+      418,
+      424
+    ],
+    [
+      354,
+      424,
+      441
+    ],
+    [
+      384,
+      459,
+      470
+    ],
+    [
+      420,
+      432,
+      528
+    ],
+    [
+      428,
+      432,
+      536
+    ],
+    [
+      436,
+      528,
+      542
+    ],
+    [
+      438,
+      434,
+      544
+    ],
+    [
+      444,
+      528,
+      547
+    ],
+    [
+      506,
+      463,
+      608
+    ],
+    [
+      526,
+      625,
+      630
+    ],
+    [
+      573,
+      470,
+      651
+    ],
+    [
+      576,
+      608,
+      653
+    ],
+    [
+      659,
+      680,
+      688
+    ],
+    [
+      662,
+      680,
+      690
+    ],
+    [
+      724,
+      700,
+      705
+    ]
+  ],
+  "ball_camera": {
+    "mode": "vertical_9_16",
+    "smoothing": "bidirectional",
+    "alpha": 0.1,
+    "crop_size": [
+      242,
+      432
+    ],
+    "output_size": [
+      720,
+      1280
+    ],
+    "ball_in_crop_pct_all_tracked": 92.8763440860215,
+    "ball_in_crop_pct_detected_only": 94.26987060998152,
+    "raw_target_jerk_px": 13.814265283456127,
+    "smoothed_crop_jerk_px": 0.9215491559086395,
+    "max_pan_px_per_frame": 12.0
+  }
+}
